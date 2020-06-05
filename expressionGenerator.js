@@ -37,11 +37,12 @@ class ExpressionGenerator {
     };
 
     sqrt = (num) => {
-        const [one, two] = this.encapsulateExpressions([a, b]);
-        const string = `sqrt(${num})`;
+        const [expr] = this.encapsulateExpressions([num]);
+        const string = `sqrt(${expr})`;
+        const evalString = `Math.sqrt(eval(${expr}))`;
         return {
             string,
-            result: eval(string),
+            result: eval(evalString),
         };
     };
 
