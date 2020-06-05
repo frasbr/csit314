@@ -2,27 +2,47 @@ class ExpressionGenerator {
     add = (a, b) => {
         // returns an expression string which involves the addition of the two expressions provided
         const [one, two] = this.encapsulateExpressions([a, b]);
-        return `${one} + ${two}`;
+        const string = `${one} + ${two}`;
+        return {
+            string,
+            result: eval(string),
+        };
     };
 
     subtract = (a, b) => {
         const [one, two] = this.encapsulateExpressions([a, b]);
-        return `${one} - ${two}`;
+        const string = `${one} - ${two}`;
+        return {
+            string,
+            result: eval(string),
+        };
     };
 
     multiply = (a, b) => {
         const [one, two] = this.encapsulateExpressions([a, b]);
-        return `${one} * ${two}`;
+        const string = `${one} * ${two}`;
+        return {
+            string,
+            result: eval(string),
+        };
     };
 
     divide = (a, b) => {
         const [one, two] = this.encapsulateExpressions([a, b]);
-        return `${one} / ${two}`;
+        const string = `${one} / ${two}`;
+        return {
+            string,
+            result: eval(string),
+        };
     };
 
     sqrt = (num) => {
         const [one, two] = this.encapsulateExpressions([a, b]);
-        return `sqrt(${num})`;
+        const string = `sqrt(${num})`;
+        return {
+            string,
+            result: eval(string),
+        };
     };
 
     encapsulateExpression = (expr) => {
