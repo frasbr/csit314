@@ -1,0 +1,104 @@
+------------------
+With static input
+------------------
+
+operation: Addition
+input: (10 + 6) + 4
+output: 20
+expected: 20
+correct
+
+operation: Subtraction
+input: 10 - (2 + 2)
+output: 6
+expected: 6
+correct
+
+operation: Multiplication
+input: 7 * 7
+output: 49
+expected: 49
+correct
+
+operation: Division
+input: 10 / 2
+output: 5
+expected: 5
+correct
+
+operation: Square root
+input: sqrt(100)
+output: 10
+expected: 10
+correct
+
+operation: Exponents (Powers)
+input: 2 ^ 2
+output: 4
+expected: 4
+correct
+
+
+------------------
+With random input
+------------------
+
+operation: Addition
+input: 9 + 0
+output: 9
+expected: 9
+correct
+
+operation: Subtraction
+input: 9 - 0
+output: 9
+expected: 9
+correct
+
+operation: Multiplication
+input: 9 * 0
+output: 0
+expected: 0
+correct
+
+operation: Division
+input: 9 / 0
+output: Infinity
+expected: Infinity
+correct
+
+operation: Square root
+input: sqrt(9)
+output: 3
+expected: 3
+correct
+
+operation: Exponents (Powers)
+input: 9 ^ 0
+output: 1
+expected: 1
+correct
+
+
+------------------
+Additional functions
+------------------
+
+operation: Derivative
+input: derivative('x^2 + x', 'x')
+output: 2 * x + 1
+expected: 2 * x + 1
+correct
+
+operation: Unit conversion
+input: 12.7 cm in inches
+output: 5 inches
+expected: 5 inches
+correct
+
+operation: Matrix operations
+input: pow([[-1, 2], [3, 1]], 2)
+output: [[7, 0], [0, 7]]
+expected: [[7, 0], [0, 7]]
+correct
+

@@ -6,6 +6,7 @@ class ExpressionGenerator {
         return {
             string,
             result: eval(string),
+            title: "Addition",
         };
     };
 
@@ -15,6 +16,7 @@ class ExpressionGenerator {
         return {
             string,
             result: eval(string),
+            title: "Subtraction",
         };
     };
 
@@ -24,6 +26,7 @@ class ExpressionGenerator {
         return {
             string,
             result: eval(string),
+            title: "Multiplication",
         };
     };
 
@@ -33,6 +36,7 @@ class ExpressionGenerator {
         return {
             string,
             result: eval(string),
+            title: "Division",
         };
     };
 
@@ -43,6 +47,18 @@ class ExpressionGenerator {
         return {
             string,
             result: eval(evalString),
+            title: "Square root",
+        };
+    };
+
+    pow = (num, pow) => {
+        const [a, n] = this.encapsulateExpressions([num, pow]);
+        const string = `${a} ^ ${n}`;
+        const evalString = `Math.pow(eval(${a}),eval(${n}))`;
+        return {
+            string,
+            result: eval(evalString),
+            title: "Exponents (Powers)",
         };
     };
 
